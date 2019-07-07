@@ -12,7 +12,7 @@ public class StackShould {
     @Before
     public void setUp() {
         // Given
-        stack = new MyStack();
+        stack = new MyStack(3);
     }
 
     @Test
@@ -40,5 +40,14 @@ public class StackShould {
 
         // Then
         assertEquals(stack.size(), 0);
+    }
+
+    @Test(expected=StackSizeOverflows.class)
+    public void when_pushed_passed_limit_then_stack_overflows() {
+        //When
+        stack.push();
+        stack.push();
+        stack.push();
+        stack.push();
     }
 }
