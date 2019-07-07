@@ -1,2 +1,2 @@
-public class StackSizeOverflows extends RuntimeException {
+class StackSizeOverflows extends RuntimeException {
 }
