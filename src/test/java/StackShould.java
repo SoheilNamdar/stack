@@ -42,6 +42,7 @@ public class StackShould {
         assertEquals(stack.size(), 0);
     }
 
+    //Then misheh exception
     @Test(expected=StackSizeOverflows.class)
     public void when_pushed_passed_limit_then_stack_overflows() {
         //When
