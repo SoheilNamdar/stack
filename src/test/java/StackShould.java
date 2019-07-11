@@ -69,9 +69,6 @@ public class StackShould {
         stack.push();
         stack.pop();
 
-        int stackSize = stack.size();
-
-        Assert.assertEquals(stackSize, 1);
-
+        assertEquals(stack.size(), 1);
     }
 }
