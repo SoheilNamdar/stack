@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -62,5 +63,15 @@ public class StackShould {
         stack.pop();
     }
 
+    @Test
+    public void when_two_values_are_pushed_then_one_is_popped_size_is_one() {
+        stack.push();
+        stack.push();
+        stack.pop();
 
+        int stackSize = stack.size();
+
+        Assert.assertEquals(stackSize, 1);
+
+    }
 }
