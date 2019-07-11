@@ -1,2 +1,0 @@
-class StackSizeOverflows extends RuntimeException {
-}

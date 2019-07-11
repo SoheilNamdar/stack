@@ -15,7 +15,7 @@ class MyStack {
         if(size < limit) {
             size += 1;
         } else {
-            throw  new StackSizeOverflows();
+            throw new StackSizeOverflowsException();
         }
     }
 
@@ -24,6 +24,10 @@ class MyStack {
     }
 
     void pop() {
-        size -= 1;
+        if (size > 0) {
+            size -= 1;
+        } else {
+            throw new StackUnderFlowsException();
+        }
     }
 }
