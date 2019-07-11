@@ -62,5 +62,5 @@ public class StackShould {
         stack.pop();
     }
 
-    
+
 }
